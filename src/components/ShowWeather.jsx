@@ -31,7 +31,7 @@ function ShowWeather(props) {
             style={{
               fontSize: "100px",
               position: "relative",
-              backgroundColor: "#3F4E4F",
+              backgroundColor: "#256D85",
               borderRadius: "10px",
               margin: "40px",
             }}
@@ -52,19 +52,19 @@ function ShowWeather(props) {
             <div
               className="col"
               style={{
-                backgroundColor: "#3F4E4F",
+                backgroundColor: "#256D85",
                 borderRadius: "10px",
                 position: "relative",
                 margin: "0 10px 0",
               }}
             >
-              <h2 style={{ margin: "20px 0 0" }}>{props.description}</h2>
+              <h2 style={{ margin: "25px 0 0" }}>{props.description}</h2>
               <img src={props.icon}></img>
             </div>
             <div
               className="col"
               style={{
-                backgroundColor: "#3F4E4F",
+                backgroundColor: "#256D85",
                 borderRadius: "10px",
                 position: "relative",
                 margin: "0 10px 0",
