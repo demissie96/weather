@@ -1,0 +1,48 @@
+#city-div {
+  position: absolute;
+  margin: auto;
+  width: 400px;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#city-div h1 {
+  margin-bottom: 30px;
+}
+
+#temp {
+  font-size: 100px;
+  position: relative;
+  background-color: #256d85;
+  border-radius: 10px;
+  margin: 40px;
+}
+
+#celsius {
+  position: relative;
+  font-size: 40px;
+  vertical-align: text-top;
+  top: 15px;
+}
+
+#humidity-icon {
+  width: 60px;
+  margin-top: 10px;
+}
+
+#humidity-number {
+  margin-top: 10px;
+}
+
+#weather-description {
+  margin: 20px 0 0;
+}
+
+.col {
+  background-color: #256d85;
+  border-radius: 10px;
+  position: relative;
+  margin: 0 10px 0;
+}

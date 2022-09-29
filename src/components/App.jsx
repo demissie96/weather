@@ -58,9 +58,7 @@ function App() {
           iconNum = "03";
         }
         weatherIcon = `https://openweathermap.org/img/wn/${iconNum}d@2x.png`;
-        console.log(
-          `${weatherCity}, ${weatherCountry}, ${weatherID}, ${weatherMain}, ${weatherTemp}, ${weatherHumidity}`
-        );
+
         setWeatherPageVisibility(true);
         setInputVisibility(false);
       })

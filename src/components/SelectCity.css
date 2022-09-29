@@ -1,0 +1,12 @@
+#input-div {
+  width: 400px;
+  position: relative;
+  margin: 48vh auto;
+  visibility: visible;
+}
+
+#button-addon2 {
+  color: #dff6ff !important;
+  border-width: 2px;
+  font-weight: bold;
+}

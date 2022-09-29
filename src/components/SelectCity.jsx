@@ -1,4 +1,5 @@
 import React from "react";
+import "./SelectCity.css";
 
 let city = "";
 
@@ -10,15 +11,7 @@ function SelectCity({ selectCity }) {
 
   return (
     <>
-      <div
-        className="input-group mb-3"
-        style={{
-          width: "400px",
-          position: "relative",
-          margin: "48vh auto",
-          visibility: "visible",
-        }}
-      >
+      <div id="input-div" className="input-group mb-3">
         <input
           id="city-input"
           type="text"
@@ -39,7 +32,7 @@ function SelectCity({ selectCity }) {
           }}
         />
         <button
-          className="btn btn-secondary"
+          className="btn btn-primary"
           type="button"
           id="button-addon2"
           onClick={() => {

@@ -1,25 +1,25 @@
 .btn-outline-primary {
-    color: #47B5FF !important;    
-    border-color: #47B5FF !important;
-    border-width: 2px;
-    font-weight: bold;
+  color: #47b5ff !important;
+  border-color: #47b5ff !important;
+  border-width: 2px;
+  font-weight: bold;
 }
 
 .btn-outline-primary:hover {
-    color: #DFF6FF !important;
-    background-color: #47B5FF !important;
-    border-color: #47B5FF !important;
+  color: #dff6ff !important;
+  background-color: #47b5ff !important;
+  border-color: #47b5ff !important;
 }
 
 .btn-outline-primary:focus {
-    box-shadow: 0 0 0 .2rem #47B5FF7b !important;
-    color: #DFF6FF !important;
-    background-color: #47B5FF !important;
+  box-shadow: 0 0 0 0.2rem #47b5ff7b !important;
+  color: #dff6ff !important;
+  background-color: #47b5ff !important;
 }
 
 .change-city-button {
-    position: absolute;
-    top: 85%;
-    left: 70%;
-    white-space: nowrap;
+  position: absolute;
+  top: 85%;
+  left: 70%;
+  white-space: nowrap;
 }
