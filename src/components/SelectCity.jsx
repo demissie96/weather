@@ -1,13 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 
 let city;
 
 function SelectCity({ selectCity }) {
-  const [componentVisible, setComponentVisible] = useState(true);
-
   function sendCity() {
     selectCity(city);
-    setComponentVisible(true);
   }
 
   return (
@@ -16,9 +13,9 @@ function SelectCity({ selectCity }) {
         className="input-group mb-3"
         style={{
           width: "400px",
-          position: componentVisible ? "relative" : "absolute",
+          position: "relative",
           margin: "48vh auto",
-          visibility: componentVisible ? "visible" : "hidden",
+          visibility: "visible",
         }}
       >
         <input
