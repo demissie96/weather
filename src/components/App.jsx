@@ -1,11 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import SelectCity from "./SelectCity";
 
+let city;
+
 function App() {
-  const [city, setCity] = useState("");
+
+  function selectCity(cityName) {
+    city = cityName;
+    console.log(city);
+  }
   return (
     <>
-      <SelectCity />
+      <SelectCity selectCity={selectCity}/>
     </>
   );
 }

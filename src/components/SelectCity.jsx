@@ -1,21 +1,29 @@
 import React from "react";
 
-function SelectCity(props) {
+let city;
+
+function SelectCity({ selectCity }) {
   return (
     <>
       <div
-        class="input-group mb-3"
+        className="input-group mb-3"
         style={{ width: "400px", position: "relative", margin: "48vh auto" }}
       >
         <input
           type="text"
-          class="form-control"
+          className="form-control"
           placeholder="Add City"
           aria-label="Recipient's username"
           aria-describedby="button-addon2"
           autoFocus
+          onChange={(e) => city = e.target.value}
         />
-        <button class="btn btn-secondary" type="button" id="button-addon2">
+        <button
+          className="btn btn-secondary"
+          type="button"
+          id="button-addon2"
+          onClick={() => selectCity(city)}
+        >
           Check
         </button>
       </div>
