@@ -20,6 +20,7 @@ function SelectCity({ selectCity }) {
         }}
       >
         <input
+          id="city-input"
           type="text"
           className="form-control"
           placeholder="Add City"

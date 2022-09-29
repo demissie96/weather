@@ -34,7 +34,7 @@ function App() {
         weatherTemp = Math.round(response.data.main.temp);
         weatherHumidity = response.data.main.humidity;
         weatherCountry = response.data.sys.country;
-        weatherIcon = `https://openweathermap.org/img/wn/11d@2x.png`
+        weatherIcon = `https://openweathermap.org/img/wn/11d@2x.png`;
         console.log(
           `${weatherCity}, ${weatherCountry}, ${weatherID}, ${weatherMain}, ${weatherTemp}, ${weatherHumidity}`
         );
@@ -43,7 +43,9 @@ function App() {
       })
       .catch(function (error) {
         // handle error
-        console.log(error.response.data.message);
+        alert(`${error.response.data.message.toUpperCase()}...`);
+        document.getElementById("city-input").value = "";
+        document.getElementById("city-input").focus();
       });
   }
 
