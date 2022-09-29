@@ -6,16 +6,23 @@ let city;
 
 function App() {
   const [weatherPage, setWeatherPage] = useState(false);
+  const [visibility, setVisibility] = useState(true);
 
   function selectCity(cityName) {
     city = cityName;
-    console.log(city);
     setWeatherPage(true);
+    setVisibility(false);
+  }
+
+  function changeCity() {
+    setWeatherPage(false);
+    city = null;
+    setVisibility(true);
   }
   return (
     <>
-      <SelectCity selectCity={selectCity} />
-      {weatherPage && <ShowWeather city={city} />}
+      {visibility && <SelectCity selectCity={selectCity} />}
+      {weatherPage && <ShowWeather city={city} changeCity={changeCity} />}
     </>
   );
 }

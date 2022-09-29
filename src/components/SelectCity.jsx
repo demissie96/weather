@@ -7,7 +7,7 @@ function SelectCity({ selectCity }) {
 
   function sendCity() {
     selectCity(city);
-    setComponentVisible(false);
+    setComponentVisible(true);
   }
 
   return (

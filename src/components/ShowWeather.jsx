@@ -1,8 +1,15 @@
 import React from "react";
+import Button from "./Button";
 
 function ShowWeather(props) {
+    
+  function changeCity() {
+    props.changeCity();
+  }
+
   return (
     <>
+      <Button changeCity={changeCity} />
       <div
         style={{
           position: "absolute",
