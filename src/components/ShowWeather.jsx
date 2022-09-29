@@ -2,7 +2,7 @@ import React from "react";
 import Button from "./Button";
 
 function ShowWeather(props) {
-    // Triggered by 'Button' child component
+  // Triggered by 'Button' child component
   function changeCity() {
     // Trigger parent function
     props.changeCity();
@@ -22,7 +22,9 @@ function ShowWeather(props) {
           transform: "translate(-50%, -50%)",
         }}
       >
-        <h1 style={{ marginBottom: "30px" }}>{props.city}</h1>
+        <h1 style={{ marginBottom: "30px" }}>
+          {props.city}, {props.country}
+        </h1>
         <hr></hr>
         <div>
           <p
@@ -34,7 +36,7 @@ function ShowWeather(props) {
               margin: "40px",
             }}
           >
-            {props.temperature}15
+            {props.temp}
             <span
               style={{
                 position: "relative",
@@ -56,13 +58,8 @@ function ShowWeather(props) {
                 margin: "0 10px 0",
               }}
             >
-              <h3
-                style={{
-                  margin: "10px",
-                }}
-              >
-                Cloudy ☁️
-              </h3>
+              <h2 style={{ margin: "20px 0 0" }}>{props.description}</h2>
+              <img src={props.icon}></img>
             </div>
             <div
               className="col"
@@ -73,9 +70,8 @@ function ShowWeather(props) {
                 margin: "0 10px 0",
               }}
             >
-              <p
+              <div
                 style={{
-                  fontSize: "20px",
                   margin: "0",
                   position: "absolute",
                   top: "50%",
@@ -83,8 +79,10 @@ function ShowWeather(props) {
                   transform: "translate(-50%, -50%)",
                 }}
               >
-                20/5 ˚C
-              </p>
+                <h2>{props.humidity} % </h2>
+                <img src="/images/humidity.png" alt="Humidity" style={{ width: "60px"}}/>
+              </div>
+              
             </div>
           </div>
         </div>
