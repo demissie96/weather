@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
+import SelectCity from "./SelectCity";
 
 function App() {
-  return <>
-  
-  </>;
+  const [city, setCity] = useState("");
+  return (
+    <>
+      <SelectCity />
+    </>
+  );
 }
 
 export default App;
