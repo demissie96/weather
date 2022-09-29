@@ -2,8 +2,9 @@ import React from "react";
 import Button from "./Button";
 
 function ShowWeather(props) {
-    
+    // Triggered by 'Button' child component
   function changeCity() {
+    // Trigger parent function
     props.changeCity();
   }
 

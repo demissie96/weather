@@ -5,24 +5,26 @@ import ShowWeather from "./ShowWeather";
 let city;
 
 function App() {
-  const [weatherPage, setWeatherPage] = useState(false);
-  const [visibility, setVisibility] = useState(true);
+  const [weatherPageVisibility, setWeatherPageVisibility] = useState(false);
+  const [inputVisibility, setInputVisibility] = useState(true);
 
+  // Receive data from 'SelectCity' child component
   function selectCity(cityName) {
     city = cityName;
-    setWeatherPage(true);
-    setVisibility(false);
+    setWeatherPageVisibility(true);
+    setInputVisibility(false);
   }
 
+  // Triggered by 'Button' component that is inside 'ShowWeather' component.
   function changeCity() {
-    setWeatherPage(false);
+    setWeatherPageVisibility(false);
     city = null;
-    setVisibility(true);
+    setInputVisibility(true);
   }
   return (
     <>
-      {visibility && <SelectCity selectCity={selectCity} />}
-      {weatherPage && <ShowWeather city={city} changeCity={changeCity} />}
+      {inputVisibility && <SelectCity selectCity={selectCity} />}
+      {weatherPageVisibility && <ShowWeather city={city} changeCity={changeCity} />}
     </>
   );
 }

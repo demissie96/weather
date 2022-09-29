@@ -3,6 +3,7 @@ import React from "react";
 let city;
 
 function SelectCity({ selectCity }) {
+  // Send city data to 'App' parent component.
   function sendCity() {
     selectCity(city);
   }
