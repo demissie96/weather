@@ -5,6 +5,11 @@ let city;
 function SelectCity({ selectCity }) {
   const [componentVisible, setComponentVisible] = useState(true);
 
+  function sendCity() {
+    selectCity(city);
+    setComponentVisible(false);
+  }
+
   return (
     <>
       <div
@@ -23,15 +28,21 @@ function SelectCity({ selectCity }) {
           aria-label="Recipient's username"
           aria-describedby="button-addon2"
           autoFocus
-          onChange={(e) => (city = e.target.value)}
+          onKeyPress={(e) => {
+            if (e.key === "Enter") {
+              sendCity();
+            }
+          }}
+          onChange={(e) => {
+            city = e.target.value;
+          }}
         />
         <button
           className="btn btn-secondary"
           type="button"
           id="button-addon2"
           onClick={() => {
-            selectCity(city);
-            setComponentVisible(false);
+            sendCity();
           }}
         >
           Check
