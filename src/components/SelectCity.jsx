@@ -1,6 +1,6 @@
 import React from "react";
 
-let city;
+let city = "";
 
 function SelectCity({ selectCity }) {
   // Send city data to 'App' parent component.
@@ -23,13 +23,15 @@ function SelectCity({ selectCity }) {
           id="city-input"
           type="text"
           className="form-control"
-          placeholder="Add City"
+          placeholder="Budapest, HU"
           aria-label="Recipient's username"
           aria-describedby="button-addon2"
           autoFocus
           onKeyPress={(e) => {
             if (e.key === "Enter") {
-              sendCity();
+              if (city != "") {
+                sendCity();
+              }
             }
           }}
           onChange={(e) => {
@@ -41,7 +43,9 @@ function SelectCity({ selectCity }) {
           type="button"
           id="button-addon2"
           onClick={() => {
-            sendCity();
+            if (city != "") {
+              sendCity();
+            }
           }}
         >
           Check
