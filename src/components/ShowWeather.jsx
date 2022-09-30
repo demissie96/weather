@@ -25,7 +25,7 @@ function ShowWeather(props) {
           <div className="row">
             <div className="col">
               <h2 id="weather-description">{props.description}</h2>
-              <img src={props.icon}></img>
+              <img src={props.icon} alt="icon"></img>
             </div>
             <div className="col">
               <div>

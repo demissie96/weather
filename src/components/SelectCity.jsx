@@ -22,7 +22,7 @@ function SelectCity({ selectCity }) {
           autoFocus
           onKeyPress={(e) => {
             if (e.key === "Enter") {
-              if (city != "") {
+              if (city !== "") {
                 sendCity();
               }
             }
@@ -36,7 +36,7 @@ function SelectCity({ selectCity }) {
           type="button"
           id="button-addon2"
           onClick={() => {
-            if (city != "") {
+            if (city !== "") {
               sendCity();
             }
           }}
